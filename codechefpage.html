@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sriram Codechef</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: rgb(226, 249, 249);
+        }
+        .image{
+            width: 180px;
+            padding: 0px 50px;
+        }
+        .header{
+            width: 96%;
+            padding:30px;
+            height:35px;
+            background-color: white;
+            position: fixed;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 1px 9px;     
+         }
+        .header li{
+            display: inline-block;
+            margin: 0px 20px; 
+        }
+        .header ul a{
+            padding:10px 10px;
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            cursor:pointer;
+            color:rgb(67, 67, 67);
+        }
+        .header ul a:hover{
+            background-color: rgb(235, 233, 233);
+        }
+        .Login{
+            padding:6px 6px;
+            margin-right:10px;
+            color: rgb(89, 89, 245);
+            background-color: transparent;
+            border-color: currentColor;
+            border: solid 2px;
+            font-weight: 700;
+        }
+        .Login:hover{
+            cursor: pointer;
+            color: white;
+            background-color: rgb(89, 89, 245);
+            border: solid 2px rgb(89, 89, 245);
+
+        }
+        .signup{
+            padding:6px 6px;
+            margin-right:7px;
+            color:rgb(89, 89, 245);
+            background-color: transparent;
+            border-color: currentColor;
+            border: solid 2px;
+            font-weight: 700;
+        }
+        .signup:hover{
+            cursor: pointer;
+            color: white;
+            background-color: rgb(89, 89, 245);
+            border: solid 2px rgb(89, 89, 245);
+        }
+        .firstbox{
+            padding-top: 150px;
+            padding-left: 200px;
+            border-spacing: 40px;
+            line-height: 35px;
+            display: inline-block;
+            size-adjust: 2000px;
+        }
+        .start{
+            line-height: 60px;
+            font-size: 45px;
+            display: inline-block;
+            padding-right: 0px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .learnto{
+            line-height: 32px;
+            letter-spacing: 0.8px;
+            font-weight: lighter;
+            color: gray;
+            font-family: cursive;
+            display: inline-block;
+        }
+        .email{
+            margin-top: 20px;
+            padding-bottom: 15px;
+        }
+        .input1{
+            margin-right: -4px;
+            padding: 10px 12px;
+            border-top-left-radius: 9px;
+            border-bottom-left-radius: 9px;
+            border: solid,rgb(153, 152, 152);
+            border-width: 0.5px;
+            background-color: aliceblue;
+            font-size: 15px;
+            opacity: 70%;
+            display: inline-block;
+        }
+        .startleRN{
+            background-color: rgb(2, 133, 226);
+            color: white;
+            padding: 11px 12px;
+            border-top-right-radius: 9px;
+            border-bottom-right-radius: 9px;
+            border:none;
+            font-size: 14px;
+            padding-right: 30px;
+            display: inline-block;
+        }
+        .wgoogle{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            font-size: 8px;
+            padding-top: 0px;
+            font-weight: 400;
+            color: rgb(63, 63, 63);
+            font-family: cursive;
+        }
+        .orsign{
+            left: 40px;
+            padding-right: 50px;
+            font-size: 18px;
+            padding-top: 0px;
+        }
+        .supgog{
+            padding: 10px 12px;
+            border-radius: 9px;
+            border: solid,gray,1px;
+            background-color: white;
+            font-family: Outfit, sans-serif;
+            font-family: cursive;
+        }
+        .coderimg{
+            display: inline-block;
+            padding-top:150px;
+            padding-left: 100px;
+            size-adjust: 800px;
+            padding-bottom: 70px;
+        }
+        .box{
+            height: 1280px;
+            width: 1200px;
+            background-color: white;
+            margin: 0px 81px;
+            padding: 32px 64px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 1px 1px 10px;
+        }
+
+        .he2{
+           margin: 8px;
+           margin-bottom: 10px;
+        }
+        .LearningCard{
+            background-color: rgb(250, 249, 249);
+            width: 284px;
+            height: 331px;
+            padding: 20px 24px;
+            box-shadow: 0.1px 0.1px 5px;
+            border-radius: 10px;
+            box-shadow: rgb(216, 216, 216);
+            display: inline-block;
+            margin: 20px;
+        }
+        .Beginner{
+            display: block;
+            background-color: rgb(216, 214, 214);
+            padding: 4px 8px;
+            font-weight: light;
+        }
+        .titlecont{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cardtitle{
+            padding-top: 20px;
+            font-size: 20px;
+            color: rgb(82, 82, 247);
+        }
+        .content{
+            padding-top: 45px;
+            line-height: 28px;
+            color: rgb(72, 72, 72);
+
+        }
+        .enrollbtn{
+            width: 285px;
+            height: 42px;
+            margin-top: 35px;
+            color: rgb(75, 75, 238);
+            padding: 9px 16px;
+            background-color: white;
+            justify-content: center;
+            text-align: center;
+            border: solid 1px;
+            font-size: 18px;
+
+        }
+        .enrollbtn:hover{
+            background-color: rgb(95, 95, 242);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./codechefpage.html"><img  class="image" src="https://cdn.codechef.com/images/cc-logo.svg"></a>
+        <ul>
+            <li><a href='#'>Courses</a></li>
+            <li><a href='#'>Practice</a></li>
+            <li><a href='#'>Compete</a></li>
+            <button class="Login"> Login</button>
+            <button class="signup">Signup</button>
+        </ul>
+    </div>
+    <div class="firstbox">
+        <h1 class="start"> Start your coding <br>journey today</h1><br>
+
+        <p class="learnto">Learn to code from scratch with <br>practice oriented courses designed by experts</p>
+        <div class="email">
+            <input type="text" placeholder="Enter email" class="input1">
+            <button class="startleRN">Start learning today</button>
+        </div>
+            <div class="wgoogle">
+                <p class="orsign">or sign up with    </p><br>
+                <button class="supgog"><img src="" alt="">Google</button>
+        </div>
+    </div>
+    <div class="coderimg">
+        <img src="https://cdn.codechef.com/images/home/coding_boy.svg">
+    </div>
+    <div class="box">
+    <h1 class="he2"> Learn to code </h1>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+    <div class="LearningCard">
+        <div class="titlecont">
+        <img src="https://cdn.codechef.com/images/self-learning/icons/python.svg">
+        <h4 class="Beginner">Beginner</h4>
+    </div>
+    <div class="cardtitle">Learn Python</div>
+    <div class="content">Get hands-on practice and nail down the fundamentals of Python to jumpstart your coding journey</div>
+    <button class="enrollbtn">View this Course</button>
+    </div>
+</div>
+    <p></p>
+</body>
+</html>
