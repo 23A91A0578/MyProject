@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sriram RedbUs</title>
+    <link rel="shortcut icon" href="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" type="image/x-icon">
+    <style>
+        *{
+            border: 0px;
+            padding: 0px;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        .header{
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fdfdfd;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }   
+        .navbar{
+            display: flex;
+            
+            align-items: center;
+        } 
+        .rb_logo{
+            margin: 25px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 150px;
+            
+        }
+        .bustickets{
+            height: 80px;
+            width: 130px;
+            background-color: rgb(184, 67, 67);
+            border-radius: 15px;
+            display: block;
+            overflow: hidden;
+            margin-right: 0px;
+        }
+        .bustickets img{
+            color: white;
+            
+            height: 1.9rem;
+            margin-top: 10px;
+            display: block;
+            margin-bottom: 0px;
+
+        }
+        .bustickets p{
+            margin: 2px;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .traintickets{
+             height: 80px;
+            width: 130px;
+            margin-left: 5px;
+        }
+        .traintickets img{
+            align-items: center;
+            height: 1.9rem;
+            margin-top: 15px;
+            justify-content: center;
+            
+        }
+        .traintickets p{
+            text-align: center;
+            margin-top: 2px;
+            color: rgb(0, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .help{
+            width: 83px;
+            height: 20px;
+            display: flex;
+            margin-left: 100px;
+            margin-right: 70px;
+
+        }
+        .help img{
+            height: 1.5rem;
+            margin-bottom: 100px;
+        }
+        .help p{
+            margin-left: 0px;
+            text-align: center;
+            color: black;
+            margin-top: 2px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .account{
+            width: 83px;
+            height: 20px;
+            display: flex;
+    margin-left: 5px;
+    margin-right: 100px;
+        }
+        .account img{
+            height: 1.5rem;
+            margin-bottom: 100px;
+        }
+        .account p{
+            margin-left: 0px;
+            text-align: center;
+            margin-top: 5px;
+            color: black;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .main{
+            height: 650px;
+            width: 100%;
+            padding-bottom: 30px;
+            background-image: url(https://s3.rdbuz.com/images/webplatform/india/Homepage%20header-03%202.webp);
+            background-size: cover;
+            display: block;
+
+        }
+        .searchingforbus h2{
+            text-align: center;
+            border-top: 100px;
+            font-size: 45px;
+            padding-top: 20px;
+            color: white;
+            margin-bottom: 50px;
+        }
+        .searchingforbus{
+            padding-bottom: 100px;
+        }
+        
+    .totalbox { /* brown shade */
+      width: 20%;
+      height: 150px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center; /* horizontally center */
+      align-items: center;  
+      margin-top: 25px; /* vertically center */
+    }
+
+    .inputbox {
+      background-color: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-right: 2px black;
+    }
+    .inputbox input{
+        background-color: rgb(238, 234, 229);
+        padding: 20px;
+        border-radius: 20px;
+        border: none;
+        border-color: rgb(250, 249, 248);
+        outline: none;
+    }
+    .line{
+        margin-left: 9px;
+    }
+    #dateofj{
+        margin-top: 20px;
+        margin-left: px;
+        padding: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #book-bus{
+        margin-top: 20px;
+        color: white;
+        padding: 20px 50px;
+        font-size: 14px;
+        font-family: cursive;
+        cursor: pointer;
+        background: linear-gradient(to right,rgb(243, 84, 84),rgb(168, 49, 49));
+    }
+    
+    .trendingoffers{
+        width: 80%;
+        height: 300px;
+        box-shadow: 0px 0px 8px black;
+        margin-top: 250px;
+        background-color: #ffffff;
+        border-radius: 50px;
+     
+         padding-bottom: 35px;
+    }
+    .trendingoffers h2{
+        padding: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(54, 52, 52);
+        padding-bottom: 20px;
+        padding-top: 35px;
+        font-size: 38px;
+
+        
+    }
+    .offerbox{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        overflow: scroll;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding-bottom: 35px;
+        padding-left: 20px;
+       
+
+    }
+    .offerbox::-webkit-scrollbar {
+    height: 10px;
+}
+
+.offerbox::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.offerbox > div {
+    flex-shrink: 0;
+}
+
+    .bus1{
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        margin-left: 50px;
+        display: flex;
+        margin-top: 0px;
+        margin-right: 40px;
+        background: linear-gradient(to right,rgb(33, 33, 185),rgb(79, 79, 223));
+    }
+    .bus2{
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        margin-left: 0px;
+        display: flex;
+        
+        margin-top: 0px;
+        margin-right: 40px;
+        background: linear-gradient(to right,rgb(103, 10, 10),rgb(191, 7, 7));
+    }
+    .bus3{
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;display: flex;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 40px;
+        background: linear-gradient(to right,#14532d,rgb(7, 160, 15));
+    }
+    .bus4{
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        margin-left: 0px;
+        display: flex;
+        margin-top: 0px;
+        margin-right: 40px;
+        background: linear-gradient(to right,rgb(28, 83, 115),rgb(10, 121, 190));
+    }
+    .bus5{width: 300px;
+        height: 200px;
+        border-radius: 20px;
+        margin-left: 0px;
+        margin-top: 0px;
+        display: flex;
+        margin-right: 40px;
+        background: linear-gradient(to right,rgb(202, 179, 1),rgb(225, 255, 0));
+    }
+    .bus1 img{
+        padding-left: 20px;
+    }
+    .bus1-txt h3{
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        display: block;
+        padding-bottom: 1px;
+        margin-bottom: 0px;
+    }
+    .bus1-txt p{
+        color: white;
+        display: block;
+        padding-left: 15px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .bus1-txt h4{
+        margin-top: 1px;
+        background-color: rgba(231, 227, 223, 0.195);
+        padding: 5px 10px;
+        
+        overflow: hidden;
+        border: dashed 2px;
+        border-radius: 10px;
+    }
+    .bus2 img{
+        padding-left: 20px;
+    }
+    .bus2-txt h3{
+        color: white;
+        padding: 10px;
+        display: block;
+        margin-top: 20px;
+        padding-bottom: 1px;
+        margin-bottom: 0px;
+    }
+    .bus2-txt h4{
+        margin-top: 15px;
+        background-color: rgba(231, 227, 223, 0.195);
+        padding: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        overflow: hidden;
+        border: dashed 2px;
+        border-radius: 10px;
+    }
+    .bus2-txt p{
+        color: white;
+        display: block;
+        padding-left: 15px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .bus3 img{
+        padding-left: 20px;
+    }
+    .bus3-txt h3{
+        color: white;
+        padding: 10px;
+        display: block;
+        padding-bottom: 1px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    .bus3-txt p{
+        color: white;
+        display: block;
+        padding-left: 15px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .bus3-txt h4{
+        margin-top: 1px;
+        background-color: rgba(231, 227, 223, 0.195);
+        padding: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        overflow: hidden;
+        border: dashed 2px;
+        border-radius: 10px;
+    }
+    .bus4 img{
+        padding-left: 20px;
+    }
+    .bus4-txt h3{
+        color: white;
+        padding: 10px;
+        display: block;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+    .bus4-txt p{
+        color: white;
+        display: block;
+        padding-left: 15px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .bus4-txt h4{
+        margin-top: 1px;
+        background-color: rgba(231, 227, 223, 0.195);
+        padding: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        overflow: hidden;
+        border: dashed 2px;
+        border-radius: 10px;
+    }
+    .bus5 img{
+        padding-left: 20px;
+    }
+    .bus5-txt h3{
+        color: white;
+        padding: 10px;
+        display: block;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+    }
+    .bus5-txt p{
+        color: white;
+        display: block;
+        padding-left: 15px;
+        margin-top: 15px;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .bus5-txt h4{
+        margin-top: 1px;
+        background-color: rgba(231, 227, 223, 0.195);
+        padding: 5px;
+        padding-left: 2px;
+        padding-right: 2px;
+        overflow: hidden;
+        border: dashed 2px;
+        border-radius: 10px;
+    }
+  .enjoytheapp {
+  background-color: #c84d4d;
+  border-radius: 20px;
+  width: 70%;
+  height: 600px;
+  margin-top: 320px;
+ align-items: center;
+  padding: 20px 25px;
+  color: white;
+  font-family: sans-serif;
+  
+}
+
+.enjoytheapp h2 {
+  font-size: 28px;
+  margin-left: 10px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+.enjoytheapp img{
+    display: flex;
+    width: 50%;
+    
+ border-radius: 50px;
+    margin-left: 280px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.app-features {
+  background-color: white;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin-right: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  margin-left: 350px;
+  margin-bottom: 20px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-features p {
+  font-size: 18px;
+  
+  
+  margin: 10px 0;
+  display: flex;
+  
+}
+
+.check {
+  color: green;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  
+}
+
+.app-ratings {
+  display: flex;
+  justify-content: space-around;
+
+  margin-top: 30px;
+  padding: 0 30px;
+  color: #000000;
+}
+
+.store h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.star {
+  color: black;
+  font-size: 20px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: #ccc;
+}
+.primobuses{
+    margin-top: 30px;
+    margin-left: 60px;
+    size: 90px;
+    width: 10px;
+     align-items: center;
+    justify-content: center;
+}
+.primobuses img{
+    margin-left: 200px;
+    width: 1000px;
+    border-radius: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.heading{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    margin-left: 200px;
+    margin-top: 80px;
+    font-size: 45px;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content{
+    margin-left: 200px;
+    text-align: left;
+   color: rgb(174, 172, 172);
+    line-height: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer{
+    background-color: rgba(149, 150, 147, 0.281);
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+
+}
+.rb-logo2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    margin-top: 0px;
+    margin-left: 130px;
+    padding-top: 120px;
+    width: 8.5rem;
+    margin-right: 50px;
+    
+}
+.para-under-logo{
+    display: flexbox;
+    width: 500px;
+    margin-right: 30px;
+    margin-left: 20px;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+.para-under-logo p{
+    font-size: 15px;
+    margin-right: 20px;
+    color: #333;
+    display: flex;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+}
+
+.aboutinfo{
+    color: #000000;
+    text-align: left;
+    margin-left: 550px;
+    margin-top: -280px;
+    height: 30px;
+}
+.aboutinfo li{
+    list-style: none;
+    line-height: 30px;
+    color: #1a1a1ad5;
+}
+.GlobalSites{
+    color: #000000;
+    text-align: left;
+    margin-left: 820px;
+    margin-top: -33px;
+    height: 30px;
+}
+.GlobalSites li{
+     list-style: none;
+    line-height: 30px;
+    color: #1a1a1ad5;
+}
+.mainfooter {
+  background-color: #b3b2b255;
+  padding: 15px 40px;
+  margin-top: 290px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid #0000002e;
+  margin-bottom: 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* for mobile */
+}
+
+.footer-content p {
+
+  color: #333;
+  font-size: 14px;
+}
+
+.social-icons a {
+  margin-left: 50px;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d; /* redBus theme color */
+}
+
+  </style>
+   <script>
+      function initAutocomplete() {
+        new google.maps.places.Autocomplete(document.getElementById('frombox'));
+        new google.maps.places.Autocomplete(document.getElementById('Tobox'));
+      }
+    </script>
+    
+
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+<img src="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" alt="redBus" class="rb_logo" title="redBus" style="width: 5rem; height: 3rem; cursor: pointer;">
+<div class="bustickets">
+    <img src="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" alt="bustickets" style="color: aliceblue; ">
+    <p>Bus Tickets</p>
+</div>
+<div class="traintickets">
+    <img src="https://s3.rdbuz.com/web/images/layout/rail_vertical.svg" alt="traintickets">
+    <p>Train Tickets</p>
+</div>
+<div class="help">
+<img src="https://img.icons8.com/?size=100&id=E4FAF4hA9ugF&format=gif" alt="help">
+<p>Help</p>
+</div>
+<div class="account">
+<img src="https://img.icons8.com/?size=100&id=pETkiIKt6qBf&format=png&color=000000" alt="account" style="height: 2.2rem;">
+<p>Account</p>
+</div></div>
+<div class="main">
+    <div class="searchingforbus">
+        <h2>India's No.1 Bus Booking Website</h2>  
+    <div class="totalbox">
+<div class="inputbox" onload="initAutocomplete()"">
+        <input type="text" name="From" id="frombox" placeholder="From">
+        <div class="line"style="align-items:center;border-left:  2px solid rgba(136, 134, 134, 0.626); height: 90px;"></div>
+
+        <input type="text" name="To" id="Tobox" placeholder="To">
+        <input type="date"  placeholder="Date" name="dateofj" id="dateofj"><br>
+        <input type="submit" value="Book Bus" id="book-bus">
+    </div>  
+</div>
+</div>
+<div class="trendingoffers">
+<h2>Trending offers</h2>
+<div class="offerbox">
+<div class="bus1">
+<img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="First">
+<div class="bus1-txt">
+<h3>Save up to Rs.250 on Bus Tickets </h3><br>
+<p>Valid till 31 May</p><br>
+<h4>FIRST</h4>
+</div>
+</div>
+<div class="bus2">
+    <img src="https://st.redbus.in/Images/INDOFFER/SUPERHIT/80x80.png" alt="second">
+    <div class="bus2-txt">
+    <h3>Save up to Rs. 300 in AP, Telangana routes </h3><br>
+    <p>Valid till 31 May</p>
+    <h4>SUPERHIT</h4>
+    </div>
+</div>
+<div class="bus3">
+    <img src="https://st.redbus.in/Images/INDOFFER/CHARTERED15/80x80.png" alt="First">
+    <div class="bus3-txt">
+    <h3>Save up to Rs 300 on Chartered Bus </h3><br>
+    <p>Valid till 31 May</p><br>
+    <h4>CHARTERED15</h4>
+    </div>
+</div>
+<div class="bus4">
+    <img src="https://st.redbus.in/Images/INDOFFER/80x80/SBSTC.png" alt="First">
+<div class="bus4-txt">
+<h3>Save 25% up to Rs 100 on SBSTC bus </h3><br>
+<p>Valid till 31 May</p><br>
+<h4>SBNEW</h4>
+</div>
+</div>
+<div class="bus5">
+    <img src="https://st.redbus.in/Images/INDOFFER/intrcity/80X80.png" alt="First">
+<div class="bus5-txt">
+    <h3>Save up to Rs. 50 on IntrCity SmartBus </h3><br>
+<p>Valid till 31 May</p><br>
+<h4>INTRCITY</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <div class="enjoytheapp">
+  <h2>ENJOY THE APP!</h2>
+  <div class="app-features">
+    <p><span class="check">&#10004;</span> Quick access</p>
+    <p><span class="check">&#10004;</span> Superior live tracking</p>
+  </div>
+  <img src="Screenshot 2025-05-10 115423.png" alt="">
+  
+  <div class="app-ratings">
+    <div class="store">
+      <h3>4.5 <span class="star">&#9733;</span></h3>
+      <p>50M+ downloads</p>
+      <strong>Play Store</strong>
+    </div>
+    
+    <div class="store">
+      <h3>4.6 <span class="star">&#9733;</span></h3>
+      <p>50M+ downloads</p>
+      <strong>App Store</strong>
+    </div>
+  </div>
+</div>
+<div class="primobuses">
+    <img src="Screenshot 2025-05-11 104600.png" alt="">
+</div>
+<div class="footcontent">
+    <div class="heading">
+        Online Bus Ticket Booking on redBus
+    </div>
+    <div class="content" style="color: black;">
+        redBus offers key services that benefit passengers when booking bus tickets online, such as:
+<br><br>
+
+<strong>Free Cancellation:</strong> Cancel bus tickets without paying cancellation charges. Receive a full refund 6 hours prior to departure. <br>
+
+<strong>Change Travel Date:</strong> Select a Flexi ticket to modify your travel date at least 8 hours before departure. Receive a 50% refund for cancelling bus tickets 12 hours before the scheduled journey date. 
+<br>
+<strong>Booking for Women:</strong> Access exclusive deals for women travellers, view the number of women on your bus, enjoy priority helplines, and find buses preferred by women.
+<br>
+<strong>Assurance Program:</strong> Secure a trip against the cancellation of tickets by bus operators and receive up to 500 INR in your wallet. 
+<br>
+<strong>Earn Rewards:</strong> Refer your friend and get INR 100 in your redBus wallet after they complete their first trip. 
+<br>
+<strong>Primo Services:</strong> Select top-rated bus operators that offer timely and customer-friendly Primo services.
+<br>
+<strong>24/7 Customer Support:</strong> Receive 24/7 customer service for any assistance related to bus ticket bookings.
+<br>
+<strong>Instant Refund:</strong> Get an instant refund for cancellation or booking-related issues. 
+<br>
+<strong>Live Bus Tracking:</strong> Track your bus in real-time and plan your journey more efficiently.
+
+
+    </div>
+</div>
+<div class="footer">
+    
+<img  src="https://s3.rdbuz.com/Images/rdc/rdc-redbus-logo.svg" alt="footerredbus" class="rb-logo2">
+<div class="para-under-logo"><p >redBus is the world's largest online <br> bus ticket booking service trusted by <br>over 25 million happy customers <br>globally. redBus offers bus ticket<br> booking through its website, iOS <br>and Android mobile apps for all <br>major routes.</p></div>
+<div class="aboutinfo">
+        <h2>About Info</h2>
+        <br>
+    <ul>
+        
+        <li>About us</li>
+        <li>Investor Relations</li>
+        <li>Contact us</li>
+        <li>redbus on Mobile</li>
+        <li>Sitemap</li>
+        <li>Offers</li>
+        <li>Careers</li>
+        <li>Values</li>
+
+    </ul>
+</div>
+<div class="GlobalSites">
+        <h2>Global Sites</h2>
+        <br>
+    <ul>
+        
+        <li>India</li>
+        <li>Singapore</li>
+        <li>Malaysia</li>
+        <li>Indonesia</li>
+        <li>Peru</li>
+        <li>Colombia</li>
+        <li>Cambodia</li>
+        <li>Vetnam</li>
+
+    </ul>
+</div>
+<div class="mainfooter">
+    <hr class="footer-line" />
+  <div class="footer-content">
+    <p class="copyright">© 2025 Redbus India Pvt Ltd. All rights reserved</p>
+    <div class="social-icons">
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1051/1051309.png" alt="Facebook" width="24" /></a>
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536569.png" alt="LinkedIn" width="24" /></a>
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter" width="24" /></a>
+  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1400/1400829.png" alt="Instagram" width="24" /></a>
+</div>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
