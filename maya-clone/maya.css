@@ -1,0 +1,968 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    position: fixed;
+    z-index: 2;
+    width: 1528px;
+    height: 85px;
+    margin-top: 0px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin-bottom: 0px;
+    overflow: visible;
+    justify-content: space-between;
+    box-shadow: 1px 1px 50px rgba(138, 138, 138, 0.638);
+}
+.header-brand{
+    width: 200px;
+    height: 66px;
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.logo img{
+    width: 180px;
+}
+.other-web-list{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    align-items: center;
+    justify-content: center;
+    width: 1030px;
+    
+
+}
+.webs-2{
+
+ list-style: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    gap: 100px;
+    word-wrap: normal;
+    word-break: normal;
+    padding-left: 100px;
+    width: 1000px;
+    top: 0;
+    padding-top: 24px;
+    margin-top: 0px;
+    margin-right: 00px;
+
+}
+.webs-2 li{
+    padding-top: 10px;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.login-btn{
+    display: flex;
+    width: 200px;
+    margin-top: 10px;
+    margin-right: 50px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.login-btn button{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 500px;
+    background-color: rgb(3, 187, 3);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 600;    
+}
+.banner{
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 780px;
+    position: relative;
+    top: 1px;
+    z-index: 1;
+}
+.titlepng{
+    position: absolute;
+    left: 140px;
+    top: 200px;
+    animation: up 2s ;
+}
+@keyframes up {
+    0%{
+        transform: translateY(100px);
+        opacity: 0.5;
+    }
+}
+
+.girlsimg{
+    position: absolute;
+    right: 100px;
+    top: 170px;
+    animation: left 2s;
+}
+@keyframes left {
+    0%{
+        transform: translateX(120px);
+        opacity: 0.5;
+    }
+}
+.inner{
+    width: 280px;
+    height: 80px;
+    background-color: white;
+    padding-top: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    position: absolute;
+bottom: 50px;
+right: 370px;
+border-radius: 20px;
+animation: up1 2s;
+box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.599);
+}
+@keyframes up1 {
+    0%{
+        transform: translateY(30px);
+        opacity: 0.5;
+    }
+}
+.media{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+}
+.media img{
+    display: flex;
+    width: 30px;
+}
+.title{
+    margin-top: 0px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    padding-left: 1dvh;
+    margin-bottom: 6px;
+    margin-left: 5px;
+}
+.content{
+    
+    position: absolute;
+    bottom  :40px;
+    right: 30px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 15px;
+
+}
+.content span{
+    text-align: center;
+}
+.greenboard{
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to right, rgb(2, 94, 2),rgb(4, 191, 4));
+}
+.box-struct{
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box-struct h2{
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 20px;
+}
+.vert-line{
+    width: 2px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.211);
+}
+
+
+.b4{
+    margin-right: 100px;
+}
+.b1{
+    margin-left: 50px;
+}
+.b1,.b2,.b3,.b4{
+    display: flex;
+    gap: 20px;
+}
+.b1 img{
+    display: flex;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 30%;
+    color: white;
+    margin-top: 7px;
+    background-color: rgba(255, 255, 255, 0.878);
+}
+.b2 img{
+    display: flex;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 30%;
+    color: white;
+    margin-top: 7px;
+    background-color: rgba(255, 255, 255, 0.941);
+}
+.b3 img{
+    display: flex;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 30%;
+    color: white;
+    margin-top: 7px;
+    background-color: rgba(255, 255, 255, 0.941);
+}
+.b4 img{
+    display: flex;
+    margin-top: 0px;
+    padding: 10px;
+    border-radius: 30%;
+    color: white;
+    margin-top: 7px;
+    background-color: rgba(255, 255, 255, 0.941);
+}
+.categories{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    
+}
+@keyframes popup1 {
+    0%{
+        transform: translateY(-10px);
+        opacity: 0.6;
+        scale: 0.8;
+    }
+    
+}
+.cate-title{
+    display: block;
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-size: 25px;
+    height: 50px;
+    justify-content: center;
+    animation: popup1 3s;
+    animation-timeline: view();
+}
+.cate-title h2{
+    margin-bottom: 0px;
+
+}
+.cate-title img{
+    margin-top: 10px;
+    left: 0px;
+    position: absolute;
+   height: 30px;
+   width: 350px;
+   animation: popup1 3s;
+    animation-timeline: view();
+}
+.cate-table{
+    position: absolute;
+    top: 1200px;
+    gap: 30px;
+    display: grid;
+    grid-template-rows: repeat(3,5fr);
+    grid-template-columns: repeat(3,5fr);
+     animation: popup1 3s;
+    animation-timeline: view();
+}
+.Tech-Train{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: rgba(61, 184, 131, 0.200);
+}
+.Tech-Train:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    
+    background-color: rgb(61, 184, 131);
+
+}
+.Code{
+    display: flex;
+    justify-content: center;
+    padding: 10px 90px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: rgba(214, 164, 125, 0.200);
+}
+.Code:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+     background-color: rgb(255, 162, 91);
+}
+.Apt{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(123, 255, 139, 0.200);
+}
+.Apt:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(82, 252, 102);;
+}
+.Communication{
+    padding: 10px 90px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgba(251, 151, 151, 0.200);
+}
+.Communication:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(248, 120, 120);
+}
+.Prof-build{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(151, 151, 251, 0.200);
+}
+.Prof-build:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(114, 114, 255);
+}
+.Placement{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: rgba(249, 141, 217, 0.200);
+}
+.Placement:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(252, 117, 212);
+}
+.certifi{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(253, 175, 66, 0.200);
+}
+.certifi:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(253, 175, 66);
+}
+.intern{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(215, 208, 74, 0.226);
+}
+.intern:hover{
+    color: white;
+    transition-duration: 0.4s;
+    scale: 1.1;
+    background-color: rgb(215, 208, 74);
+}
+.project{
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgba(151, 233, 251, 0.277);
+}
+.project:hover{
+    transition-duration: 0.4s;
+    scale: 1.1;
+    color: white;
+    background-color: rgb(85, 221, 252);
+
+}
+.about-drive-ready-banner{
+    width: 100%;
+    position: relative;
+    height: 850px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2,3fr);
+}
+.about-drive-ready-banner .girlimg{
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+.about-drive-ready-banner .girlimg img{
+    border-radius: 20px;
+}
+.about-drive-ready-banner .side1 .inner{
+    width: 210px;
+    height: 120px;
+    padding-top: 0px;
+   position: absolute;
+   top: 120px;
+   left: 397px;
+}
+.about-drive-ready-banner .side2{
+    position: relative;
+    padding: 50px;
+    width: 540px;
+    top: 50px;
+    font-family: 'Poppins';
+    animation: left 5s;
+    animation-timeline: view();
+}
+.about-drive-ready-banner .side2 .title{
+    font-size: 42px;
+    padding-left: 0px;
+    margin-left: 0px;
+    line-height: 53px;
+    font-weight: 600;
+}
+.about-drive-ready-banner .side2 .main-content p{
+    color: gray;
+    line-height: 29px;
+}
+.about-drive-ready-banner .side2 .heading-points{
+    display: grid;
+    grid-template-columns: repeat(2,30px);
+   
+    gap: 20px;
+}
+.about-drive-ready-banner .side2 .heading-points h4{
+    font-weight: 600;
+    margin-top: 0px;
+    width: 250px;
+    margin-bottom: 0px;
+    
+
+}
+.about-drive-ready-banner .side2 .heading-points img{
+    display: flex;
+}
+.about-drive-ready-banner .side2 .stroke-img{
+     margin-top: 0px;
+   
+  
+   height: 30px;
+   width: 350px;
+   margin-bottom: 0px;
+}
+.about-drive-ready-banner .side1 .inner2{
+    width: 200px;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 70px;
+    left: 400px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.236);
+color: gray;
+border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    grid-template-columns: repeat(2,1fr);
+    animation: popup 2s ease-out infinite;
+    
+    transition: transform 5s;
+}
+@keyframes popup {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(22px);
+    }
+}
+.about-drive-ready-banner .side1 .inner2 p{
+    position: relative;
+    
+}
+.popular-courses-banner{
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(220, 220, 220, 0.403);
+    padding: 30px;
+    font-family: 'Poppins';
+   
+
+}
+@keyframes up2 {
+    0%{
+        transform: translateY(50px);
+        opacity: 0.2;
+        scale: 0.9;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.popular-courses-banner .title{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: relative;
+    margin-bottom: 0px;
+      animation: up2 0.8s ease-out ;
+    
+    animation-timeline: view();
+    
+    
+}
+.popular-courses-banner .title .pre-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-family: 'Poppins';
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: gray;
+    font-weight: 500;
+}
+.popular-courses-banner .title .main-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-top: 0px;
+    font-weight: bolder;
+    font-family: 'Poppins';
+    letter-spacing:1px;
+
+}
+.popular-courses-banner .courses-banner-table{
+    width: 1000px;
+    display: grid;
+    justify-content: space-around;
+    padding: 100px;
+    padding-left: 130px;
+    gap: 40px;
+    padding-top: 50px;
+    align-items: center;
+    grid-template-columns: repeat(4,1fr);
+    animation: up2 0.8s ease-out ;
+    animation-range: entry  20%;
+    animation-timeline: view();
+    
+}
+.AWS-banner,.flutter-banner,.GenerativeAI-banner,.ReactNative-banner{
+    width: 280px;
+    height: 400px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: 1s ;
+}
+.AWS-banner:hover{
+    transition-duration: 1s ;
+    background-color: green;
+}
+.AWS-banner img:hover{
+    opacity: 0;;
+    transition-duration: 1s;
+    
+    
+}
+.browse-courses-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.browse-courses-btn button{
+    width: 250px;
+    background-color: rgb(3, 86, 3);
+    border: none;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+     
+     
+     
+}
+.browse-courses-btn button:hover{
+    background-color: rgba(71, 155, 71, 0.903);
+   
+}
+.count-body{
+    background-color: white;
+    width: 800px;
+    height: 450px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.523);
+    position: relative;
+    left: 400px;
+    top: 90px;
+}
+.count-body .table{
+    display: grid;
+    border: 30px silver solid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 30px;
+    border-radius: 20px;
+    padding-bottom: 43px;
+    padding-left: 170px;
+    row-gap: 100px;
+}
+.Trainee-reviews{
+    width: 100%;
+    height: 700px;
+    margin-top: 450px;
+    display: grid;
+    font-family: 'Poppins';
+    grid-template-columns: repeat(2,1fr);
+}
+.Trainee-reviews .Testimonials{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    left: 100px;
+    padding: 50px;
+    word-spacing: 2px;
+    margin-right: 50px;
+    padding-right: 0px;
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0);
+    border-radius: 20px;
+     animation: up3 1s ease-out ;
+    animation-range: entry 50%;
+    
+}
+@keyframes up3 {
+    0%{
+        transform: translateY(150px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+}
+.Trainee-reviews .Testimonials .matter{
+    color: gray;
+    line-height: 25px;
+    font-size: 15px;
+}
+.Trainee-reviews .trainee-rev-boxes{
+    display: grid;
+    position: relative;
+    left: -100px;
+    gap: 30px;
+    grid-template-columns: repeat(2,1fr);
+}
+.Trainee-reviews .trainee-rev-boxes .box1,.box2{
+    width: 280px;
+    height: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(173, 173, 173, 0.308);
+    animation: left 4s;
+    
+    
+}
+.Trainee-reviews .trainee-rev-boxes .matter,.Regards{
+    position: relative;
+    top: 120px;
+    font-size: 15px;
+    line-height: 30px;
+    color: gray;
+    margin-top: 0px;
+}
+.cont-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.cont-card .contact-card{
+    width: 800px;
+    padding: 50px;
+    height: 100px;
+    background: linear-gradient(to right,rgb(2, 92, 2),rgba(35, 223, 35, 0.888));
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    color: white;
+    gap: 00px;
+    border-radius: 60px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.certificate-small-card{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-family: 'Poppins';
+    background-color: rgba(224, 240, 255, 0.815);
+    width: 100%;
+    height: 250px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.certificate-small-card .get-started-btn{
+    position: absolute;
+    bottom: 50px;
+    top: 5130px;
+    left: 650px;
+    
+}
+.certificate-small-card .get-started-btn button{
+     width: 250px;
+    background-color: rgb(3, 86, 3);
+    border: none;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+     
+}
+.partners-banner{
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    display: grid;
+    font-family: 'Poppins';
+    grid-template-columns: repeat(2,1fr);
+}
+.partners-banner .partners{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    left: 130px;
+    padding: 50px;
+    word-spacing: 2px;
+    margin-right: 50px;
+    padding-right: 0px;
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0);
+    border-radius: 20px;
+     animation: up3 1s ease-out ;
+    animation-range: entry 50%;
+    
+}
+
+
+.partners-banner .partners .matter{
+    color: gray;
+    line-height: 25px;
+    font-size: 15px;
+}
+.certi-imgs{
+    padding: 130px;
+    display: grid;
+    height: 400px;
+    gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(4,150px)
+
+}
+.certi-imgs img:hover{
+    background-color: white;
+    padding: 5px;
+    box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.214);
+}
+.footer{
+    width: 100%;
+    height: 250px;
+    background-color: rgba(35, 35, 35, 0.123);
+}
+.footer .top-footer{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 50px;
+    font-family: 'Poppins';
+    color: green;
+    justify-content: space-around;
+}
+.our-social .icons img{
+    width: 35px;
+    padding: 8px;
+}
+.footer .bottom-footer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Poppins';
+    font-size: 18px;
+    margin-top: 5px;
+}
+@media (max-width: 480px) {
+            .nav {
+                height: 70px;
+                padding: 0 10px;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            .banner {
+                padding: 80px 10px 20px;
+            }
+
+            .titlepng {
+                max-width: 280px;
+            }
+
+            .girlsimg {
+                max-width: 300px;
+            }
+
+            .side2 .title {
+                font-size: 24px;
+            }
+
+            .popular-courses-banner .title .main-title {
+                font-size: 22px;
+            }
+
+            .count-body .table {
+                grid-template-columns: 1fr;
+            }
+
+            .count-body .table span {
+                font-size: 24px;
+            }
+
+            .Testimonials .title {
+                font-size: 22px;
+            }
+
+            .certificate-small-card {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+
+            .partners .title {
+                font-size: 22px;
+            }
+
+            .certi-imgs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-card {
+                font-size: 14px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .banner-content,
+        .banner-image {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .cate-table > div {
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .cate-table > div:nth-child(1) { animation-delay: 0.1s; }
+        .cate-table > div:nth-child(2) { animation-delay: 0.2s; }
+        .cate-table > div:nth-child(3) { animation-delay: 0.3s; }
+        .cate-table > div:nth-child(4) { animation-delay: 0.4s; }
+        .cate-table > div:nth-child(5) { animation-delay: 0.5s; }
+        .cate-table > div:nth-child(6) { animation-delay: 0.6s; }
+        .cate-table > div:nth-child(7) { animation-delay: 0.7s; }
+        .cate-table > div:nth-child(8) { animation-delay: 0.8s; }
+        .cate-table > div:nth-child(9) { animation-delay: 0.9s; }
